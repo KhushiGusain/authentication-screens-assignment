@@ -9,10 +9,10 @@ const Button = ({
   className = '',
   ...props 
 }) => {
-  const baseClasses = 'w-full py-2.5 px-4 rounded-md font-medium focus:ring-2 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm';
+  const baseClasses = 'w-full py-2.5 px-4 rounded-md font-medium focus:ring-2 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-sm';
   
   const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    primary: 'text-white focus:ring-gray-500',
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500'
   };
@@ -22,6 +22,20 @@ const Button = ({
       type={type}
       disabled={disabled || isLoading}
       className={`${baseClasses} ${variants[variant]} ${className}`}
+      style={variant === 'primary' ? {
+        backgroundColor: '#1a414b',
+        '--tw-ring-color': '#1a414b'
+      } : {}}
+      onMouseEnter={(e) => {
+        if (variant === 'primary') {
+          e.target.style.backgroundColor = '#0f2a30';
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (variant === 'primary') {
+          e.target.style.backgroundColor = '#1a414b';
+        }
+      }}
       {...props}
     >
       {isLoading ? (

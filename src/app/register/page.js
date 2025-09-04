@@ -114,7 +114,7 @@ export default function RegisterPage() {
   const footer = (
     <p className="text-sm text-gray-600">
       Already have an account?{' '}
-      <Link href="/login" className="text-blue-600 hover:text-blue-500 font-medium">
+      <Link href="/login" className="text-teal-600 hover:text-teal-500 font-medium">
         Sign in
       </Link>
     </p>
@@ -236,11 +236,11 @@ export default function RegisterPage() {
           error={errors.agreeToTerms}
         >
           I agree to the{' '}
-          <a href="#" className="text-blue-600 hover:text-blue-500 underline">
+          <a href="#" className="underline" style={{ color: '#1a414b' }} onMouseEnter={(e) => e.target.style.color = '#0f2a30'} onMouseLeave={(e) => e.target.style.color = '#1a414b'}>
             Terms of Service
           </a>{' '}
           and{' '}
-          <a href="#" className="text-blue-600 hover:text-blue-500 underline">
+          <a href="#" className="underline" style={{ color: '#1a414b' }} onMouseEnter={(e) => e.target.style.color = '#0f2a30'} onMouseLeave={(e) => e.target.style.color = '#1a414b'}>
             Privacy Policy
           </a>
         </Checkbox>

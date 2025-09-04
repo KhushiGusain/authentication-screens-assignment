@@ -10,13 +10,16 @@ const Checkbox = ({
 }) => {
   return (
     <div>
-      <label className={`flex items-start space-x-3 ${className}`}>
+      <label className={`flex items-start space-x-3 cursor-pointer ${className}`}>
         <input
           type="checkbox"
           name={name}
           checked={checked}
           onChange={onChange}
-          className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          className="mt-1 h-4 w-4 border-gray-300 rounded"
+          style={{
+            accentColor: '#1a414b'
+          }}
         />
         <span className="text-sm text-gray-600">
           {children}
