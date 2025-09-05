@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Input from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
 import FormCard from '../../components/ui/FormCard';
@@ -15,6 +16,7 @@ export default function ForgotPasswordPage() {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const router = useRouter();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -72,15 +74,15 @@ export default function ForgotPasswordPage() {
 
   const footer = (
     <div className="space-y-3">
-      <p className="text-sm text-gray-600">
+      <p className="text-xs text-gray-600">
         Remember your password?{' '}
-        <Link href="/login" className="underline" style={{ color: '#1a414b' }} onMouseEnter={(e) => e.target.style.color = '#0f2a30'} onMouseLeave={(e) => e.target.style.color = '#1a414b'}>
+        <Link href="/login" className="text-teal-600 hover:text-teal-500 font-medium">
           Sign in
         </Link>
       </p>
-      <p className="text-sm text-gray-600">
+      <p className="text-xs text-gray-600">
         Don't have an account?{' '}
-        <Link href="/register" className="underline" style={{ color: '#1a414b' }} onMouseEnter={(e) => e.target.style.color = '#0f2a30'} onMouseLeave={(e) => e.target.style.color = '#1a414b'}>
+        <Link href="/register" className="text-teal-600 hover:text-teal-500 font-medium">
           Create account
         </Link>
       </p>
@@ -110,20 +112,24 @@ export default function ForgotPasswordPage() {
             </p>
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <p className="text-sm text-blue-800">
-              Check your email and click the reset link to continue. The link expires in 1 hour.
-            </p>
-          </div>
 
-          <Button
-            onClick={() => {
-              setIsSuccess(false);
-              setFormData({ email: '' });
-            }}
-          >
-            Send Another Link
-          </Button>
+          <div className="space-y-3">
+            <Button
+              onClick={() => router.push('/reset-password?token=demo')}
+            >
+              Continue to Reset Password
+            </Button>
+            
+            <Button
+              variant="outline"
+              onClick={() => {
+                setIsSuccess(false);
+                setFormData({ email: '' });
+              }}
+            >
+              Send Another Link
+            </Button>
+          </div>
         </div>
       </FormCard>
     );

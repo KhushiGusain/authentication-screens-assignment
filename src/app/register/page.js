@@ -112,7 +112,7 @@ export default function RegisterPage() {
   };
 
   const footer = (
-    <p className="text-sm text-gray-600">
+    <p className="text-xs text-gray-600">
       Already have an account?{' '}
       <Link href="/login" className="text-teal-600 hover:text-teal-500 font-medium">
         Sign in

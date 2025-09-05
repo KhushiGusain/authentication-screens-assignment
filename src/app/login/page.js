@@ -78,13 +78,13 @@ export default function LoginPage() {
 
   const footer = (
     <div className="space-y-3">
-      <p className="text-sm text-gray-600">
+      <p className="text-xs text-gray-600">
         Don't have an account?{' '}
         <Link href="/register" className="text-teal-600 hover:text-teal-500 font-medium">
           Create account
         </Link>
       </p>
-      <p className="text-sm text-gray-600">
+      <p className="text-xs text-gray-600">
         <Link href="/forgot-password" className="text-teal-600 hover:text-teal-500 font-medium">
           Forgot password?
         </Link>
