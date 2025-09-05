@@ -115,7 +115,7 @@ export default function ForgotPasswordPage() {
 
           <div className="space-y-3">
             <Button
-              onClick={() => router.push('/reset-password?token=demo')}
+              onClick={() => router.push('/reset-password')}
             >
               Continue to Reset Password
             </Button>

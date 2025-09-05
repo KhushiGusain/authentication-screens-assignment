@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 
-const OtpInput = ({ length = 5, onComplete, onResend }) => {
+const OtpInput = ({ length = 5, onComplete, onResend, onEnter }) => {
   const [otp, setOtp] = useState(Array(length).fill(''));
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRefs = useRef([]);
@@ -58,6 +58,12 @@ const OtpInput = ({ length = 5, onComplete, onResend }) => {
       setActiveIndex(index + 1);
     }
 
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (otp.every(digit => digit !== '') && onEnter) {
+        onEnter();
+      }
+    }
 
     if (e.key === 'v' && (e.ctrlKey || e.metaKey)) {
       e.preventDefault();

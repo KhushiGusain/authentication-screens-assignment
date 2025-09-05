@@ -113,13 +113,6 @@ export default function ResetPasswordPage() {
       subtitle="Enter your new password"
       footer={footer}
     >
-      {!isTokenValid && (
-        <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <p className="text-sm text-yellow-800">
-            <strong>Note:</strong> This is a demo. In a real application, an invalid or missing token would prevent password reset.
-          </p>
-        </div>
-      )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

@@ -13,6 +13,9 @@ export default function VerifyOtpPage() {
 
   const handleOtpComplete = (completedOtp) => {
     setOtp(completedOtp);
+    if (completedOtp.length === 5) {
+      handleVerify();
+    }
   };
 
   const handleVerify = async () => {
@@ -21,18 +24,9 @@ export default function VerifyOtpPage() {
     setIsLoading(true);
     
     try {
-<<<<<<< HEAD
-=======
-      // Simulate API call
->>>>>>> master
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       console.log('OTP verification successful:', otp);
-      
-<<<<<<< HEAD
-=======
-      // Route to dashboard
->>>>>>> master
       router.push('/dashboard');
       
     } catch (error) {
@@ -45,10 +39,6 @@ export default function VerifyOtpPage() {
 
   const handleResend = async () => {
     try {
-<<<<<<< HEAD
-=======
-      // Simulate API call
->>>>>>> master
       await new Promise(resolve => setTimeout(resolve, 500));
       
       console.log('Resending OTP...');
@@ -86,6 +76,7 @@ export default function VerifyOtpPage() {
             <OtpInput 
               length={5} 
               onComplete={handleOtpComplete}
+              onEnter={handleVerify}
             />
           </div>
 
