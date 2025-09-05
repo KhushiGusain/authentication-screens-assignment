@@ -21,10 +21,18 @@ export default function VerifyOtpPage() {
     setIsLoading(true);
     
     try {
+<<<<<<< HEAD
+=======
+      // Simulate API call
+>>>>>>> master
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       console.log('OTP verification successful:', otp);
       
+<<<<<<< HEAD
+=======
+      // Route to dashboard
+>>>>>>> master
       router.push('/dashboard');
       
     } catch (error) {
@@ -37,6 +45,10 @@ export default function VerifyOtpPage() {
 
   const handleResend = async () => {
     try {
+<<<<<<< HEAD
+=======
+      // Simulate API call
+>>>>>>> master
       await new Promise(resolve => setTimeout(resolve, 500));
       
       console.log('Resending OTP...');
