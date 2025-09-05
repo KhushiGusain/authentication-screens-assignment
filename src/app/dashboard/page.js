@@ -6,6 +6,7 @@ export default function DashboardPage() {
   const router = useRouter();
 
   const handleLogout = () => {
+    localStorage.removeItem('isAuthenticated');
     router.push('/login');
   };
 
@@ -26,9 +27,15 @@ export default function DashboardPage() {
           <div className="space-y-4">
             <div className="bg-gray-50 rounded-lg p-4">
               <h2 className="text-lg font-semibold text-gray-800 mb-2">Dashboard</h2>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 mb-3">
                 This is your dashboard. You can add your content here.
               </p>
+              <button
+                onClick={() => router.push('/twofactor/enable')}
+                className="text-sm text-teal-600 hover:text-teal-500 font-medium underline"
+              >
+                Enable 2-Step Verification
+              </button>
             </div>
 
             <button

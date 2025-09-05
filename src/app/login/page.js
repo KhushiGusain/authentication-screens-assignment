@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Input from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
 import FormCard from '../../components/ui/FormCard';
@@ -16,6 +17,7 @@ export default function LoginPage() {
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -66,7 +68,10 @@ export default function LoginPage() {
       
       console.log('Login data:', formData);
       
+      localStorage.setItem('isAuthenticated', 'true');
+      
       alert('Login successful! Redirecting to dashboard...');
+      router.push('/dashboard');
       
     } catch (error) {
       console.error('Login error:', error);
