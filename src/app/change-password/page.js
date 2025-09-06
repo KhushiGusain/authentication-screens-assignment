@@ -93,13 +93,13 @@ export default function ChangePasswordPage() {
 
   return (
     <DashboardLayout>
-      <div className="max-w-2xl mx-auto p-4 sm:p-4 lg:p-6">
-        <div className="mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Change Password</h1>
-          <p className="text-sm sm:text-base text-gray-600">Update your account password</p>
+      <div className="max-w-2xl mx-auto p-3 sm:p-4 lg:p-6">
+        <div className="mb-4 sm:mb-6 lg:mb-8">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">Change Password</h1>
+          <p className="text-xs sm:text-sm lg:text-base text-gray-600">Update your account password</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 sm:p-4 lg:p-6">
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -152,9 +152,9 @@ export default function ChangePasswordPage() {
               />
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4">
-              <h3 className="text-sm font-medium text-blue-900 mb-2">Password Requirements:</h3>
-              <ul className="text-xs sm:text-sm text-blue-800 space-y-1">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 sm:p-3 lg:p-4">
+              <h3 className="text-xs sm:text-sm font-medium text-blue-900 mb-1 sm:mb-2">Password Requirements:</h3>
+              <ul className="text-xs sm:text-sm text-blue-800 space-y-0.5 sm:space-y-1">
                 <li>• At least 8 characters long</li>
                 <li>• Contains uppercase and lowercase letters</li>
                 <li>• Contains at least one number</li>
@@ -162,7 +162,7 @@ export default function ChangePasswordPage() {
               </ul>
             </div>
 
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
               <Button
                 type="submit"
                 isLoading={isLoading}

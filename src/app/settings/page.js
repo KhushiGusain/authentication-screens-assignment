@@ -50,17 +50,17 @@ export default function SettingsPage() {
 
   return (
     <DashboardLayout>
-      <div className="max-w-4xl mx-auto p-4 sm:p-4 lg:p-6">
-        <div className="mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Settings</h1>
-          <p className="text-sm sm:text-base text-gray-600">Manage your account preferences and security</p>
+      <div className="max-w-4xl mx-auto p-3 sm:p-4 lg:p-6">
+        <div className="mb-4 sm:mb-6 lg:mb-8">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">Settings</h1>
+          <p className="text-xs sm:text-sm lg:text-base text-gray-600">Manage your account preferences and security</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Account</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 sm:p-4 lg:p-6">
+            <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Account</h2>
             
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Display Name
@@ -92,31 +92,31 @@ export default function SettingsPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Security</h2>
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 sm:p-4 lg:p-6">
+            <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Security</h2>
             
-            <div className="space-y-4">
-              <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Two-Factor Authentication</h3>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center justify-between p-2 sm:p-3 border border-gray-200 rounded-lg">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xs sm:text-sm font-medium text-gray-900">Two-Factor Authentication</h3>
                   <p className="text-xs text-gray-500">Add extra security to your account</p>
                 </div>
                 <button
                   onClick={() => router.push('/twofactor/enable')}
-                  className="text-sm text-teal-600 hover:text-teal-500 font-medium"
+                  className="text-xs sm:text-sm text-teal-600 hover:text-teal-500 font-medium ml-2 flex-shrink-0"
                 >
                   Enable 2FA →
                 </button>
               </div>
 
-              <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Change Password</h3>
+              <div className="flex items-center justify-between p-2 sm:p-3 border border-gray-200 rounded-lg">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xs sm:text-sm font-medium text-gray-900">Change Password</h3>
                   <p className="text-xs text-gray-500">Update your account password</p>
                 </div>
                 <button
                   onClick={() => router.push('/change-password')}
-                  className="text-sm text-teal-600 hover:text-teal-500 font-medium"
+                  className="text-xs sm:text-sm text-teal-600 hover:text-teal-500 font-medium ml-2 flex-shrink-0"
                 >
                   Change →
                 </button>
@@ -124,13 +124,13 @@ export default function SettingsPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 lg:col-span-2">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Notifications</h2>
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 sm:p-4 lg:p-6 lg:col-span-2">
+            <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Notifications</h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Email Notifications</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className="flex items-center justify-between p-2 sm:p-3 border border-gray-200 rounded-lg">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xs sm:text-sm font-medium text-gray-900">Email Notifications</h3>
                   <p className="text-xs text-gray-500">Receive updates via email</p>
                 </div>
                 <button
@@ -147,9 +147,9 @@ export default function SettingsPage() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Push Notifications</h3>
+              <div className="flex items-center justify-between p-2 sm:p-3 border border-gray-200 rounded-lg">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xs sm:text-sm font-medium text-gray-900">Push Notifications</h3>
                   <p className="text-xs text-gray-500">Receive push notifications</p>
                 </div>
                 <button
@@ -169,7 +169,7 @@ export default function SettingsPage() {
           </div>
         </div>
 
-        <div className="flex justify-end mt-6">
+        <div className="flex justify-end mt-4 sm:mt-6">
           <Button
             onClick={handleSave}
             isLoading={isLoading}
