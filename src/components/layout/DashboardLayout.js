@@ -47,6 +47,12 @@ const DashboardLayout = ({ children }) => {
     { name: 'Change Password', href: '/change-password', icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z' },
   ];
 
+  // Get the current active page name
+  const getActivePageName = () => {
+    const activeItem = navigation.find(item => item.href === pathname);
+    return activeItem ? activeItem.name : 'Dashboard';
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -79,7 +85,7 @@ const DashboardLayout = ({ children }) => {
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
         <div className="flex items-center justify-between h-12 px-6 border-b border-gray-200">
-          <h1 className="text-lg font-semibold text-gray-900">Dashboard</h1>
+          <h1 className="text-lg font-semibold text-gray-900">{getActivePageName()}</h1>
           <button
             onClick={() => setSidebarOpen(false)}
             className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100"
@@ -154,7 +160,7 @@ const DashboardLayout = ({ children }) => {
           </button>
         </div>
 
-        <main className="h-full">
+        <main className="h-full pt-16 lg:pt-0">
           {children}
         </main>
       </div>

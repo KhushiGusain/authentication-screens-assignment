@@ -51,8 +51,8 @@ export default function VerifyOtpPage() {
   };
 
   const footer = (
-    <div className="space-y-3">
-      <p className="text-xs text-gray-600">
+    <div className="space-y-2 sm:space-y-3">
+      <p className="text-xs sm:text-sm text-gray-600">
         Didn't receive the code?{' '}
         <button
           onClick={handleResend}
@@ -71,7 +71,7 @@ export default function VerifyOtpPage() {
         subtitle="Enter the 5-digit code sent to your email"
         footer={footer}
       >
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <div className="flex justify-center">
             <OtpInput 
               length={5} 

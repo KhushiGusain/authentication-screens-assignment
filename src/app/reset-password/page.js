@@ -91,14 +91,14 @@ export default function ResetPasswordPage() {
   };
 
   const footer = (
-    <div className="space-y-3">
-      <p className="text-xs text-gray-600">
+    <div className="space-y-2 sm:space-y-3">
+      <p className="text-xs sm:text-sm text-gray-600">
         Remember your password?{' '}
         <Link href="/login" className="text-teal-600 hover:text-teal-500 font-medium">
           Sign in
         </Link>
       </p>
-      <p className="text-xs text-gray-600">
+      <p className="text-xs sm:text-sm text-gray-600">
         Don't have an account?{' '}
         <Link href="/register" className="text-teal-600 hover:text-teal-500 font-medium">
           Create account
@@ -114,7 +114,7 @@ export default function ResetPasswordPage() {
       footer={footer}
     >
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
         <div>
           <label htmlFor="newPassword" className="block text-sm font-medium text-gray-700 mb-1">
             New Password

@@ -58,35 +58,35 @@ export default function EnableTwoFactorPage() {
       title="Enable 2-Step Verification" 
       subtitle="Secure your account with an authenticator app"
     >
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         <div className="text-center">
-          <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-10 h-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
           </div>
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-4 space-y-3">
-          <h3 className="font-medium text-gray-900">How it works:</h3>
-          <ul className="text-sm text-gray-600 space-y-2">
+        <div className="bg-gray-50 rounded-lg p-3 sm:p-4 space-y-2 sm:space-y-3">
+          <h3 className="font-medium text-gray-900 text-sm sm:text-base">How it works:</h3>
+          <ul className="text-xs sm:text-sm text-gray-600 space-y-1.5 sm:space-y-2">
             <li className="flex items-start">
-              <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              Scan a QR code with your authenticator app
+              <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+              <span>Scan a QR code with your authenticator app</span>
             </li>
             <li className="flex items-start">
-              <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              Enter a 6-digit code when signing in
+              <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+              <span>Enter a 6-digit code when signing in</span>
             </li>
             <li className="flex items-start">
-              <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              Your account stays secure even if your password is compromised
+              <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
+              <span>Your account stays secure even if your password is compromised</span>
             </li>
           </ul>
         </div>
 
         <div className="text-center">
-          <p className="text-xs text-gray-500 mb-4">
+          <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
             Recommended apps: Google Authenticator, Microsoft Authenticator, Authy
           </p>
           

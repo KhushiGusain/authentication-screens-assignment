@@ -88,7 +88,7 @@ const OtpInput = ({ length = 5, onComplete, onResend, onEnter }) => {
   };
 
   return (
-    <div className="flex justify-center space-x-3">
+    <div className="flex justify-center space-x-2 sm:space-x-3">
       {otp.map((digit, index) => (
         <input
           key={index}
@@ -101,7 +101,7 @@ const OtpInput = ({ length = 5, onComplete, onResend, onEnter }) => {
           onKeyDown={(e) => handleKeyDown(index, e)}
           onFocus={() => handleFocus(index)}
           className={`
-            w-12 h-12 text-center text-xl font-semibold border-2 rounded-lg
+            w-10 h-10 sm:w-12 sm:h-12 text-center text-lg sm:text-xl font-semibold border-2 rounded-lg
             focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
             transition-all duration-200
             ${activeIndex === index 
