@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import DashboardLayout from '../../components/layout/DashboardLayout';
 import Input from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
+import { FaUser, FaEnvelope } from 'react-icons/fa';
 
 export default function SettingsPage() {
   const router = useRouter();
@@ -70,6 +71,7 @@ export default function SettingsPage() {
                   value={settings.displayName}
                   onChange={handleInputChange}
                   placeholder="Enter your display name"
+                  icon={FaUser}
                 />
               </div>
 
@@ -83,6 +85,7 @@ export default function SettingsPage() {
                   value={settings.email}
                   disabled={true}
                   className="bg-gray-50"
+                  icon={FaEnvelope}
                 />
                 <p className="text-xs text-gray-500 mt-1">Email cannot be changed</p>
               </div>

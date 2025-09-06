@@ -4,6 +4,7 @@ import { useState } from 'react';
 import DashboardLayout from '../../components/layout/DashboardLayout';
 import Input from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
+import { FaUser, FaEnvelope, FaCalendarAlt } from 'react-icons/fa';
 
 export default function ProfilePage() {
   const [formData, setFormData] = useState({
@@ -94,6 +95,7 @@ export default function ProfilePage() {
                 disabled={!isEditing}
                 placeholder="Enter your display name"
                 error={errors.displayName}
+                icon={FaUser}
               />
             </div>
 
@@ -107,6 +109,7 @@ export default function ProfilePage() {
                 value={formData.email}
                 disabled={true}
                 className="bg-gray-50"
+                icon={FaEnvelope}
               />
               <p className="text-xs text-gray-500 mt-1">Email cannot be changed</p>
             </div>
@@ -121,6 +124,7 @@ export default function ProfilePage() {
                 value={formData.joinedDate}
                 disabled={true}
                 className="bg-gray-50"
+                icon={FaCalendarAlt}
               />
             </div>
 
