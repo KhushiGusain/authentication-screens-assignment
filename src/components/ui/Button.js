@@ -9,7 +9,7 @@ const Button = ({
   className = '',
   ...props 
 }) => {
-  const baseClasses = 'w-full py-2.5 px-4 rounded-md font-medium focus:ring-2 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-sm';
+  const baseClasses = 'w-full py-2.5 sm:py-3 px-4 sm:px-6 rounded-md font-medium focus:ring-2 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-sm sm:text-base';
   
   const variants = {
     primary: 'text-white focus:ring-gray-500',

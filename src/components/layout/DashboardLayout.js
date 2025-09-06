@@ -124,7 +124,7 @@ const DashboardLayout = ({ children }) => {
           <div className="mt-8 pt-6 border-t border-gray-200">
             <button
               onClick={handleLogout}
-              className="group flex items-center w-full px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+              className="group flex items-center w-full px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
             >
               <svg
                 className="mr-3 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"

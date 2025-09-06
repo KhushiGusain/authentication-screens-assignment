@@ -77,7 +77,6 @@ export default function ChangePasswordPage() {
       console.log('Password changed successfully');
       alert('Password changed successfully!');
       
-      // Reset form
       setFormData({
         currentPassword: '',
         newPassword: '',

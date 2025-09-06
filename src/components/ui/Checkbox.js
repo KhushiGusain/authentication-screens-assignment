@@ -21,7 +21,7 @@ const Checkbox = ({
             accentColor: '#1a414b'
           }}
         />
-        <span className="text-sm text-gray-600">
+        <span className="text-xs sm:text-sm text-gray-600">
           {children}
         </span>
       </label>

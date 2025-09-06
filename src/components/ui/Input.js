@@ -31,9 +31,9 @@ const Input = forwardRef(({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-                  className={`w-full pl-10 pr-4 py-2.5 border rounded-md focus:ring-2 transition-colors text-sm ${
-          hasError ? 'border-red-500' : 'border-gray-300'
-        } ${className}`}
+          className={`w-full pl-10 pr-4 py-2.5 sm:py-3 border rounded-md focus:ring-2 transition-colors text-sm sm:text-base ${
+            hasError ? 'border-red-500' : 'border-gray-300'
+          } ${className}`}
         style={{
           '--tw-ring-color': '#1a414b',
           '--tw-border-opacity': '1'
